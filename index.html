@@ -288,7 +288,7 @@ try
     <a href = "#force">FORCE CALCULATOR</a><br><br>
     <input type = "text" placeholder = "Enter the distance" id = "dist"><br><br>
     <link rel = "stylesheet" type = "text/css" href = "./style2.c22.css"/>
-    <button class="button-63" role="button" onClick = "myreswo()" type = "button" id = "submit" >FORCE</button><br>
+    <button class="button-63" role="button" onClick = "myreswo()" type = "button" id = "submit" >WORK DONE</button><br>
 
     <p><span class ="workd" id = "resultwo"></span></p>
     <script>
@@ -296,7 +296,7 @@ try
 {
     w = document.getElementById("for").value;
     if(w==null||w==" "||w==""){alert("Please enter the force!")}
-            d = document.getElementById("dist").value;
+      d = document.getElementById("dist").value;
             if(d==null||d==" "||d==""){alert("Please enter the distance")}
             num = w*d;
             document.getElementById("resultwo").innerHTML=num.toFixed(4)+" Kgm^(2)s^(-2)";
