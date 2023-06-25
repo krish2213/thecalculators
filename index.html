@@ -219,9 +219,9 @@ try
         function myresve(){
             
             di = document.getElementById("dis").value;
-            if(di==null||di==" "){alert("Please enter the displacement!")}
+            if(di==null||di==""||di==" "){alert("Please enter the displacement!")}
             ti = document.getElementById("time1").value;
-            if(ti==null||ti==" "){alert("Please enter the time taken")}
+            if(ti==null||ti==""||ti == " "){alert("Please enter the time taken")}
             num = di/ti;
             document.getElementById("resultvelo").innerHTML=num.toFixed(4)+" m/s";
         }
@@ -245,9 +245,9 @@ try
         function myresac(){
             
             v = document.getElementById("vel").value;
-            if(v==null||v==" "){alert("Please enter the velocity!")}
+            if(v==null||v==" "||v==""){alert("Please enter the velocity!")}
             ti = document.getElementById("time").value;
-            if(ti==null||ti==" "){alert("Please enter the time taken")}
+            if(ti==null||ti==" "||ti==""){alert("Please enter the time taken")}
             num = v/ti;
             document.getElementById("resultaccl").innerHTML=num.toFixed(4)+" m/s^2";
         }
@@ -272,9 +272,9 @@ try
         function myresfo()
 {
     m = document.getElementById("mass").value;
-    if(m==null||m==" "){alert("Please enter the mass!")}
+    if(m==null||m==" "||m==""){alert("Please enter the mass!")}
             a = document.getElementById("accln").value;
-            if(a==null||a==" "){alert("Please enter the acceleration")}
+            if(a==null||a==" "||a==""){alert("Please enter the acceleration")}
             num = m*a;
             document.getElementById("resultforce").innerHTML=num.toFixed(4)+" Kgms^(-2)";
 
@@ -295,9 +295,9 @@ try
         function myreswo()
 {
     w = document.getElementById("for").value;
-    if(w==null||w==" "){alert("Please enter the force!")}
+    if(w==null||w==" "||w==""){alert("Please enter the force!")}
             d = document.getElementById("dist").value;
-            if(d==null||d==" "){alert("Please enter the distance")}
+            if(d==null||d==" "||d==""){alert("Please enter the distance")}
             num = w*d;
             document.getElementById("resultwo").innerHTML=num.toFixed(4)+" Kgm^(2)s^(-2)";
 
