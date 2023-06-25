@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>
+        calculator
+    </title>
+    <style>
+        #string{
+                    border-radius: 20px;
+                    border: 3px solid rgb(42, 41, 39);
+                    padding: 15px; 
+                    width: 200px;
+                    height: 20px;    
+                    font-family: "Times New Roman";
+                    color: rgb(45, 9, 78);
+                    font-size: xx-large;
+            }
+        h1{
+            font-size: 50px;
+            font-family: "Times New Roman";
+            font-style: normal;
+            color: black;
+        }
+        p{
+            font-size: 25px;
+            font-family: "Times New Roman";
+            font-style: normal;
+            font-weight: 2000;
+        }
+        a{
+            font-size: 32px;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+        }
+        body{
+            background-image: url(https://previews.123rf.com/images/peshkov/peshkov1907/peshkov190701008/127354241-creative-education-sketch-on-yellow-background-with-copy-space-knowledge-and-science-concept.jpg);
+            background-repeat: no-repeat;
+                    background-attachment:  fixed;
+                    background-size: 100% 100%;
+        }
+        ::-webkit-input-placeholder {
+                    text-align: center;
+                    font-size: xx-large;
+                    font-family:'Times New Roman', Times, serif;
+            }
+            :-moz-placeholder {
+                text-align: center;
+                font-size: large;
+            }
+            #submit{border-radius:10px;border: 2px solid rgb(36, 6, 157); padding: 5px; width: 20px; height: 50px; font-family: "Times New Roman" ; color:blue;}
+            #num1,#num2,#num3,#num4,#num5,#num6,#num7,#num8,#num9,#num0{  
+  width: 100px;  
+  height: 60px;  
+  align-items: center;
+  background-color: #4eb8d5;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  font-size: 30px;
+  
+  
+  
+}  
+input[type=button]{
+    width: 100px;  
+  height: 60px;  
+  align-items: center;
+  background-color: #f4392c;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  font-size: 30px;
+  
+}
+input[type=text]{
+    text-align: center;
+    width: 400px;  
+  height: 60px;
+  font-size: 40px;
+  font-family: "Times New Roman";
+}
+#clear{
+    text-align: center;
+    width: 400px;  
+  height: 60px;
+  font-size: 40px;
+  font-family: "Times New Roman";
+}
+span{
+    color: black;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+    </style>
+</head>
+  
+<body>
+<center>
+    <h1>THE USEFUL CALCULATORS</h1>
+    <br><br><br><br><br><br><br><br>
+    <a href = "#simplecalculator">SIMPLE CALCULATOR</a><br><br>
+    <a href = "#velocity">VELOCITY CALCULATOR</a><br><br>
+    <a href = "#acceleration">ACCELERATION CALCULATOR</a><br><br>
+    <a href = "#force">FORCE CALCULATOR</a><br><br>
+    <a href = "#work">WORKDONE CALCULATOR</a><br><br>
+    <h2> Click on the required calculator.</h2>
+    <br><br><br><br><br>
+    <a id = "simplecalculator"></a>
+    <table class = "calculator">
+    <h1>SIMPLE CALCULATOR</h1><br><br><br>
+    <tr>
+    <td colspan="3"><input type="text" id="result" placeholder="Enter the expression" ></td>
+    <td><input value = "Clear" type = "button" onclick="clr()"/></td></tr>
+        <tr><td><input name = "one" value = "1" type = "button"  id = "num1" onclick="display('1')"/></td>
+        <td><input name = "two" value = "2" type = "button"  id = "num2" onclick="display('2')"/></td>
+        <td><input name = "three" value = "3" type = "button" id = "num3" onclick="display('3')"/></td>
+        <td><input name = "sum" value = "+" type = "button" id = "add" onclick="display('+')"/></td></tr>
+        <tr><td><input name = "four" value = "4" type = "button"  id = "num4" onclick="display('4')"/></td>
+        <td><input name = "five" value = "5" type = "button"  id = "num5" onclick="display('5')"/></td> 
+        <td><input name = "six" value = "6" type = "button"  id = "num6" onclick="display('6')"/></td> 
+        <td><input name = "sub" value = "-" type = "button"  id = "sub" onclick="display('-')"/></td></tr>
+        <tr><td><input name = "seven" value = "7" type = "button"  id = "num7" onclick="display('7')"/></td> 
+        <td><input name = "eight" value = "8" type = "button"  id = "num8" onclick="display('8')"/></td>
+        <td><input name = "nine" value = "9" type = "button"  id = "num9" onclick="display('9')" /></td> 
+        <td><input name = "mul" value = "*" type = "button"  id = "x" onclick="display('*')"/></td></tr>
+        <tr><td><input name = "point" value = "." type = "button"  id = "." onclick="display('.')"/></td>
+        <td><input name = "zero" value = "0" type = "button"  id = "num0" onclick="display('0')"/></td>
+        <td><input name = "equ" value = "=" type = "button"  id = "equals" onclick="e()"/></td>
+        <td><input name = "div" value = "/" type = "button"  id = "/" onclick="display('/')"/></td></tr>
+        
+    </table>
+
+
+        <script>
+            function display(val){
+                if(val == '='){
+                    e();
+                }
+                else{
+                document.getElementById("result").value+=val;}
+}
+            function clr() {
+            document.getElementById("result").value = "";
+        }
+        function e()    
+    {    
+try    
+    {    
+     let ans = (eval(document.getElementById("result").value));
+     clr();
+     document.getElementById("result").value = ans;
+    }    
+    catch(e)    
+    {    
+        clr();
+     display('Syntax Error');
+    }    
+    }  
+
+
+        </script>
+    <a id="velocity"></a>
+    <br><br><br><br><h1><label>VELOCITY</label></h1><br><br>
+    <p><b>In mechanics, velocity is the rate of change of the displacemet of an object with respect to time.</b><br>
+        It is obtained by displacemet and time.</p>
+    
+    <h2><b>Here you can enter the physical quantitites in SI units only</b></h2>
+    <input type = "text" placeholder = "Enter the displacement" id = "dis"><br><br>
+    <input type = "text" placeholder = "Enter the time taken" id = "time1"><br><br>
+    <link rel = "stylesheet" type = "text/css" href = "./style2.c22.css"/>
+    <button class="button-63" role="button" onClick = "myresve()" type = "button" id = "submit" >VELOCITY</button><br>
+
+    <p><span class ="velo" id = "resultvelo"></span></p>
+    <script>
+        function myresve(){
+            
+            di = document.getElementById("dis").value;
+            if(di==null||di==" "){alert("Please enter the displacement!")}
+            ti = document.getElementById("time1").value;
+            if(ti==null||ti==" "){alert("Please enter the time taken")}
+            num = di/ti;
+            document.getElementById("resultvelo").innerHTML=num.toFixed(4)+" m/s";
+        }
+    </script>
+
+    <a id = "acceleration"></a>
+    <br><br><br><br><h1><label>ACCELERATION</label></h1><br><br>
+    <p><b>In mechanics, acceleration is the rate of change of the velocity of an object with respect to time.</b><br>
+        It is obtained by velocity and time.</p>
+    
+    <h2><b>Here you can enter the velocity and time in SI units only</b></h2>
+    <input type = "text" placeholder = "Enter the Velocity" id = "vel"><br><br>
+    <h3>For velocity, you can also use our calculator!</h3>
+    <a href = "#velocity">VELOCITY CALCULATOR</a><br><br>
+    <input type = "text" placeholder = "Enter the time taken" id = "time"><br><br>
+    <link rel = "stylesheet" type = "text/css" href = "./style2.c22.css"/>
+    <button class="button-63" role="button" onClick = "myresac()" type = "button" id = "submit" >ACCELERATION</button><br>
+
+    <p><span class ="accl" id = "resultaccl"></span></p>
+    <script>
+        function myresac(){
+            
+            v = document.getElementById("vel").value;
+            if(v==null||v==" "){alert("Please enter the velocity!")}
+            ti = document.getElementById("time").value;
+            if(ti==null||ti==" "){alert("Please enter the time taken")}
+            num = v/ti;
+            document.getElementById("resultaccl").innerHTML=num.toFixed(4)+" m/s^2";
+        }
+    </script>
+    <a id="force"></a>
+    <br><br><br><br><h1><label>FORCE</label></h1><br><br>
+    <p><b>In physics, a force is an influence that causes the motion of an object with mass to change its velocity, i.e., to accelerate. <br>
+        It can be a push or a pull, always with magnitude and direction, making it a vector quantity.<br>
+            It is the product of mass and acceleration.
+        </b></p>
+    
+    <h2>ENTER THE PHYSICAL QUANTITIES IN SI UNITS ONLY</h2>
+    <input type = "text" placeholder = "Enter the mass" id = "mass"><br><br>
+    <input type = "text" placeholder = "Enter the acceleration" id = "accln"><br><br>
+    <h3><b>For calculating acceleration you can also use our calculator</b></h3>
+    <a href = "#acceleration">ACCELERATION CALCULATOR</a><br><br>
+    <link rel = "stylesheet" type = "text/css" href = "./style2.c22.css"/>
+    <button class="button-63" role="button" onClick = "myresfo()" type = "button" id = "submit" >FORCE</button><br>
+
+    <p><span class ="accl" id = "resultforce"></span></p>
+    <script>
+        function myresfo()
+{
+    m = document.getElementById("mass").value;
+    if(m==null||m==" "){alert("Please enter the mass!")}
+            a = document.getElementById("accln").value;
+            if(a==null||a==" "){alert("Please enter the acceleration")}
+            num = m*a;
+            document.getElementById("resultforce").innerHTML=num.toFixed(4)+" Kgms^(-2)";
+
+}    </script>
+<a id ="work"></a>
+<br><br><br><br><h1><label>WORK DONE</label></h1><br><br>
+<p><b>The work done by a force is the product of the displacement and the component <br>of the applied force of the object in the direction of displacement.</b></p>
+<h2><b>ENTER THE PHYSICAL QUANTITIES IN SI UNITS ONLY</b></h2>
+    <input type = "text" placeholder = "Enter the force" id = "for"><br><br>
+    <h3>YOU CAN ALSO USE OUR FORCE CALCULATOR</h3><br>
+    <a href = "#force">FORCE CALCULATOR</a><br><br>
+    <input type = "text" placeholder = "Enter the distance" id = "dist"><br><br>
+    <link rel = "stylesheet" type = "text/css" href = "./style2.c22.css"/>
+    <button class="button-63" role="button" onClick = "myreswo()" type = "button" id = "submit" >FORCE</button><br>
+
+    <p><span class ="workd" id = "resultwo"></span></p>
+    <script>
+        function myreswo()
+{
+    w = document.getElementById("for").value;
+    if(w==null||w==" "){alert("Please enter the force!")}
+            d = document.getElementById("dist").value;
+            if(d==null||d==" "){alert("Please enter the distance")}
+            num = w*d;
+            document.getElementById("resultwo").innerHTML=num.toFixed(4)+" Kgm^(2)s^(-2)";
+
+}    </script>
+</center>
+</body>
+  
+</html>
